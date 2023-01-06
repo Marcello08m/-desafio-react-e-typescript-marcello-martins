@@ -2,36 +2,47 @@
   background: black;
   padding: 22px 0;
   color: white;
+
   .firstDiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     .searchDiv {
-      input {
-        padding-left: 16px;
-        font-size: 14px;
-        height: 32px;
-        border-radius: 5px;
-        border: 2px solid #f2f2f2;
-        width: 100%;
-      }
       width: 20.63vw;
+      background: white;
+      border-radius: 5px;
+      border: 2px solid #f2f2f2;
       position: relative;
       display: flex;
-      img {
-        padding: 7px 0px;
+      align-items: center;
+      justify-content: center;
+      gap: 3.79%;
+
+      input {
         display: flex;
-        width: 1.41vw;
-        position: absolute;
-        right: 20px;
+        font-size: 14px;
+        height: 32px;
+        border: 0;
+        width: 77.27%;
+      }
+
+      img {
+        cursor: pointer;
+        display: flex;
+        // width: 1.41vw;
+        position: relative;
       }
     }
+
     .headerButton {
       display: flex;
       gap: 55px;
       padding-right: 7.81vw;
       height: 28px;
+
       .buttonEntrar {
+        cursor: pointer;
         justify-content: center;
         text-transform: uppercase;
         align-items: center;
@@ -43,20 +54,42 @@
         height: 28px;
         border: 0;
       }
+
       .cartButton {
+        cursor: pointer;
+        background: black;
+        height: 28px;
+        border: 0;
+
         img {
           display: flex;
           height: 28px;
         }
-        background: black;
-        height: 28px;
-        border: 0;
       }
     }
+
     .logo {
       display: flex;
-      //   padding-left: 7.81vw;
-      padding: 5px 0 7px 7.81vw;
+      padding-left: 7.81vw;
     }
+  }
+}
+
+.secondDiv {
+  background: black;
+  margin-top: 1px;
+  display: flex;
+  flex-direction: row;
+  padding: 14px 0 14px 7.81vw;
+  gap: 55px;
+
+  .secondHeaderButton {
+    background: black;
+    color: white;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
   }
 }

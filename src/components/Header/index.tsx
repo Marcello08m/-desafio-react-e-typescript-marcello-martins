@@ -21,6 +21,11 @@ export default function Header() {
           </div>
         </div>
       </header>
+      <div className={styles.secondDiv}>
+        <button className={styles.secondHeaderButton}>cursos</button>
+        <button className={styles.secondHeaderButton}>saiba mais</button>
+        <button className={styles.secondHeaderButton}>institucionais</button>
+      </div>
     </>
   );
 }
