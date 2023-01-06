@@ -36,7 +36,7 @@
         font-weight: 400;
         font-size: 14px;
         padding: 11px 16px;
-        max-height: 36px;
+        max-height: 42px;
         border: 1px solid #e5e5e5;
         border-radius: 4px;
 
@@ -57,6 +57,29 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .firstDivNews {
+    width: 96.88% !important;
+
+    .firstH2 {
+      font-size: 14px;
+    }
+
+    .secondDivNews {
+      flex-direction: column;
+      width: 100%;
+
+      .newsInput {
+        width: 100% !important;
+      }
+
+      .newsButton {
+        width: 100% !important;
       }
     }
   }
