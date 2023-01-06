@@ -84,3 +84,20 @@
     }
   }
 }
+
+@media screen and (min-width: 2500px) {
+  .firstH2 {
+    font-size: 36px !important;
+  }
+
+  .newsInput {
+    max-height: unset !important;
+    height: 59px;
+    font-size: 28px !important;
+  }
+
+  .newsButton {
+    height: 59px;
+    font-size: 24px !important;
+  }
+}
