@@ -1,0 +1,62 @@
+.Header {
+  background: black;
+  padding: 22px 0;
+  color: white;
+  .firstDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .searchDiv {
+      input {
+        padding-left: 16px;
+        font-size: 14px;
+        height: 32px;
+        border-radius: 5px;
+        border: 2px solid #f2f2f2;
+        width: 100%;
+      }
+      width: 20.63vw;
+      position: relative;
+      display: flex;
+      img {
+        padding: 7px 0px;
+        display: flex;
+        width: 1.41vw;
+        position: absolute;
+        right: 20px;
+      }
+    }
+    .headerButton {
+      display: flex;
+      gap: 55px;
+      padding-right: 7.81vw;
+      height: 28px;
+      .buttonEntrar {
+        justify-content: center;
+        text-transform: uppercase;
+        align-items: center;
+        display: flex;
+        font-weight: 400;
+        font-size: 14px;
+        color: white;
+        background: black;
+        height: 28px;
+        border: 0;
+      }
+      .cartButton {
+        img {
+          display: flex;
+          height: 28px;
+        }
+        background: black;
+        height: 28px;
+        border: 0;
+      }
+    }
+    .logo {
+      display: flex;
+      //   padding-left: 7.81vw;
+      padding: 5px 0 7px 7.81vw;
+    }
+  }
+}
