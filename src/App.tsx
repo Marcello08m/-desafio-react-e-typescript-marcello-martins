@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Footer from "./components/Footer";
+import NewsLetter from "./components/newsLetter";
 import Home from "./pages/Home";
 import Institutional from "./pages/Institutional";
 
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
-      <Footer />
+      <NewsLetter />
     </div>
   );
 }
