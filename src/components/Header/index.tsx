@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
-import Logo from "../../assets/logoM3.png";
-import Lupa from "../../assets/lupa.svg";
-import Cart from "../../assets/cart.svg";
+import Logo from "../../assets/img/logoM3.png";
+import Lupa from "../../assets/svg/lupa.svg";
+import Cart from "../../assets/svg/cart.svg";
 
 export default function Header() {
   return (
