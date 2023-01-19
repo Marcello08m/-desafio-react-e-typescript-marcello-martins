@@ -78,6 +78,46 @@
       display: flex;
       padding-left: 7.81vw;
     }
+
+    .menuHamburguer {
+      border: 0;
+      background: black;
+      padding-left: 16px;
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Header {
+    height: 139px;
+
+    .menuHamburguer {
+      display: flex !important;
+    }
+
+    .logo {
+      padding-left: 0 !important;
+    }
+
+    .buttonEntrar {
+      display: none !important;
+    }
+
+    .searchDiv {
+      width: 96.88% !important;
+      position: absolute !important;
+      top: 78px !important;
+      left: 16px !important;
+      right: 16px !important;
+    }
+
+    .headerButton {
+      padding-right: 16px !important;
+    }
+  }
+  .secondDiv {
+    display: none !important;
   }
 }
 
