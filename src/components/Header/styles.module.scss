@@ -5,7 +5,6 @@
 
   .firstDiv {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 
     .searchDiv {
@@ -76,8 +75,8 @@
 
     .logo {
       display: flex;
-      padding-left: 100px;
-      width: 10.6%;
+      margin-left: 100px;
+      width: 10.63vw;
     }
 
     .menuHamburguer {

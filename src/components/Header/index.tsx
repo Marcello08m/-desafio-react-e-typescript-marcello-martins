@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import Logo from "../../assets/img/logoM3.png";
+import Logo from "../../assets/svg/logoM3.svg";
 import Lupa from "../../assets/svg/lupa.svg";
 import Cart from "../../assets/svg/cart.svg";
 import Menu from "../../assets/svg/menu.svg";
