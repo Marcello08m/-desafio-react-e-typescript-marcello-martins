@@ -2,12 +2,16 @@ import styles from "./styles.module.scss";
 import Logo from "../../assets/img/logoM3.png";
 import Lupa from "../../assets/svg/lupa.svg";
 import Cart from "../../assets/svg/cart.svg";
+import Menu from "../../assets/svg/menu.svg";
 
 export default function Header() {
   return (
     <>
       <header className={styles.Header}>
         <div className={styles.firstDiv}>
+          <button>
+            <img src={Menu} alt="menu" />
+          </button>
           <img className={styles.logo} src={Logo} alt="logo m3" />
           <div className={styles.searchDiv}>
             <input type="text" placeholder="Buscar..."></input>
