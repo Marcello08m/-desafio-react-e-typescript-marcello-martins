@@ -2,6 +2,7 @@ import styles from "./styles.module.scss";
 import Home from "../../assets/svg/Home.svg";
 import Arrow from "../../assets/svg/Arrow.svg";
 import { useState } from "react";
+import { Formik, Form, Field } from "formik";
 
 export default function Institutional() {
   const [currTab, setCurrTab] = useState(0);
@@ -110,7 +111,127 @@ export default function Institutional() {
         )}
         {currTab === 5 && (
           <>
-            <div>tchau</div>
+            <div className={styles.formDiv}>
+              <h2 className={styles.formH2}>Preencha o formulário</h2>
+              <Formik
+                onSubmit={() => {}}
+                initialValues={{
+                  name: "",
+                  email: "",
+                  CPF: "",
+                  birthDate: "",
+                  phone: "",
+                  instagram: "",
+                  check: false,
+                }}
+              >
+                {(props) => (
+                  <div className={styles.formContact}>
+                    <Form>
+                      <div>
+                        <label className={styles.formLabel} htmlFor="name">
+                          Nome:
+                        </label>
+                        <span className={styles.formSpan}>
+                          *Campo Obrigatório
+                        </span>
+                        <Field
+                          type="text"
+                          name="name"
+                          placeholder="Seu nome completo"
+                          className={styles.formField}
+                        />
+                      </div>
+                      <div>
+                        <label className={styles.formLabel} htmlFor="email">
+                          E-mail:
+                        </label>
+                        <span className={styles.formSpan}>
+                          *Campo Obrigatório
+                        </span>
+                        <Field
+                          type="email"
+                          name="email"
+                          placeholder="Seu e-mail"
+                          className={styles.formField}
+                        />
+                      </div>
+                      <div>
+                        <label className={styles.formLabel} htmlFor="CPF">
+                          CPF:
+                        </label>
+                        <span className={styles.formSpan}>
+                          *Campo Obrigatório
+                        </span>
+                        <Field
+                          type="text"
+                          name="CPF"
+                          placeholder="000.000.000-00"
+                          className={styles.formField}
+                        />
+                      </div>
+                      <div>
+                        <label className={styles.formLabel} htmlFor="CPF">
+                          Data de Nascimento:
+                        </label>
+                        <span className={styles.formSpan}>
+                          *Campo Obrigatório
+                        </span>
+                        <Field
+                          type="text"
+                          name="birthDate"
+                          placeholder="00.00.0000"
+                          className={styles.formField}
+                        />
+                      </div>
+                      <div>
+                        <label className={styles.formLabel} htmlFor="phone">
+                          Telefone:
+                        </label>
+                        <span className={styles.formSpan}>
+                          *Campo Obrigatório
+                        </span>
+                        <Field
+                          type="tel"
+                          name="phone"
+                          placeholder="(00) 0000-0000"
+                          className={styles.formField}
+                        />
+                      </div>
+                      <div>
+                        <label
+                          className={styles.formLabelInstagram}
+                          htmlFor="instagram"
+                        >
+                          Instagram:
+                        </label>
+                        <Field
+                          type="text"
+                          name="instagram"
+                          placeholder="@seuuser"
+                          className={styles.formField}
+                        />
+                      </div>
+                      <div className={styles.formConfirm}>
+                        <span>*</span>
+                        <label htmlFor="check">Declaro que li e aceito</label>
+                        <Field
+                          type="checkbox"
+                          name="check"
+                          className={styles.confirmField}
+                        />
+                      </div>
+                      <button className={styles.buttonConfirm}>
+                        CADASTRE-SE
+                      </button>
+                      <span className={styles.spanConfirm}>
+                        *Formulário enviado com sucesso!
+                      </span>
+                    </Form>
+                  </div>
+                )}
+              </Formik>
+            </div>
           </>
         )}
       </div>
