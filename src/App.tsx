@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import NewsLetter from "./components/newsLetter";
 import Institutional from "./pages/Institutional";
 import Footer from "./components/Footer";
+import AsideMenu from "./components/AsideMenu";
 
 const router = createBrowserRouter([
   {

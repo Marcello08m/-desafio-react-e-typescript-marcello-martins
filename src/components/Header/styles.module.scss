@@ -43,7 +43,7 @@
     .headerButton {
       display: flex;
       gap: 55px;
-      padding-right: 100px;
+      margin-right: 100px;
       height: 28px;
 
       .buttonEntrar {
@@ -116,7 +116,8 @@
     }
 
     .logo {
-      padding-left: 0 !important;
+      width: 13.28vw !important;
+      margin-left: 0 !important;
     }
 
     .buttonEntrar {
@@ -132,7 +133,7 @@
     }
 
     .headerButton {
-      padding-right: 16px !important;
+      margin-right: 16px !important;
     }
   }
   .secondDiv {
