@@ -34,6 +34,7 @@
 .layoutPage {
   display: flex;
   margin-left: 100px;
+  margin-right: 100px;
   margin-top: 80px;
   margin-bottom: 70px;
 
@@ -96,9 +97,14 @@
     .formContact {
       width: 100%;
 
+      .inputContainer {
+        position: relative;
+      }
+
       .formLabel {
         display: flex;
         margin-top: 12px;
+        margin-bottom: 12px;
         font-family: "Roboto";
         font-weight: 400;
         font-size: 14px;
@@ -116,12 +122,13 @@
       }
 
       .formSpan {
-        float: right;
+        position: absolute;
+        right: 20px;
         font-family: "Roboto";
         font-weight: 400;
         font-size: 12px;
+        top: 17px;
         color: #ff0000;
-        padding-right: 20px;
       }
 
       .formField {
@@ -130,11 +137,12 @@
         border: 1px solid #100d0e;
         border-radius: 25px;
         height: 46px;
+        padding-left: 20px;
 
         &::placeholder {
           display: flex;
           align-items: center;
-          padding: 15px 0 15px 20px;
+          padding: 15px 0 15px;
           font-family: "Roboto";
           font-weight: 400;
           font-size: 14px;
@@ -167,6 +175,7 @@
 
       .buttonConfirm {
         background: black;
+        cursor: pointer;
         color: white;
         font-family: "Roboto";
         font-weight: 400;
