@@ -1,0 +1,321 @@
+.homeDiv {
+  display: flex;
+  margin-top: 29px;
+  margin-left: 100px;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 81px;
+
+  .home {
+    width: 16px;
+  }
+
+  .arrow {
+    width: 5px;
+  }
+
+  .textHome {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    color: #c4c4c4;
+  }
+}
+
+.h1Institucional {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+}
+
+.layoutPage {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 80px;
+  margin-bottom: 70px;
+
+  .layoutText {
+    max-width: 58.44vw;
+    margin-left: 30px;
+
+    .layoutH2 {
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 12px;
+      margin-top: 10px;
+    }
+
+    .layoutP {
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 13px;
+      color: #7d7d7d;
+    }
+  }
+
+  .buttonDiv {
+    display: flex;
+    flex-direction: column;
+    width: 23.59vw;
+    border-right: 1px solid #000000;
+
+    .buttonActive {
+      background: black !important;
+      color: white !important;
+    }
+
+    .buttonLayout {
+      border: 0;
+      background: white;
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 16px;
+      cursor: pointer;
+      color: #7d7d7d;
+      text-align: start;
+      height: 39px;
+      padding-left: 16px;
+    }
+  }
+
+  .formDiv {
+    width: 58.44vw;
+    margin-left: 30px;
+
+    .formH2 {
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .formContact {
+      width: 100%;
+
+      .inputContainer {
+        position: relative;
+      }
+
+      .formLabel {
+        display: flex;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 14px;
+        padding-left: 15px;
+      }
+
+      .formLabelInstagram {
+        display: flex;
+        margin-top: 12px;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 14px;
+        padding-left: 15px;
+        padding-bottom: 12px;
+      }
+
+      .formSpan {
+        position: absolute;
+        right: 20px;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 12px;
+        top: 17px;
+        color: #ff0000;
+      }
+
+      .formField {
+        display: flex;
+        width: 100%;
+        border: 1px solid #100d0e;
+        border-radius: 25px;
+        height: 46px;
+        padding-left: 20px;
+
+        &::placeholder {
+          display: flex;
+          align-items: center;
+          padding: 15px 0 15px;
+          font-family: "Roboto";
+          font-weight: 400;
+          font-size: 14px;
+          color: #b9b7b7;
+        }
+      }
+
+      .formConfirm {
+        display: flex;
+        margin: 13px 0 13px;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 14px;
+        justify-content: center;
+        gap: 4px;
+
+        label {
+          text-decoration: underline;
+        }
+
+        span {
+          color: #ff0000;
+        }
+
+        .confirmField {
+          min-width: 1.41vw;
+          border-radius: 3px;
+        }
+      }
+
+      .buttonConfirm {
+        background: black;
+        cursor: pointer;
+        color: white;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 16px;
+        width: 100%;
+        height: 52px;
+        border-radius: 25px;
+        letter-spacing: 0.05em;
+      }
+
+      .spanConfirm {
+        display: flex;
+        margin-top: 12px;
+        color: #008000;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .layoutPage {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 0 !important;
+    margin-bottom: 82px !important;
+    width: 96.88%;
+
+    .layoutText {
+      max-width: 96.88% !important;
+      margin: 30px 16px !important;
+
+      .layoutH2 {
+        display: flex;
+        justify-content: center !important;
+        margin-top: 0px !important;
+      }
+    }
+  }
+
+  .buttonDiv {
+    width: 96.88% !important;
+    border-right: 0 !important;
+    margin: 0 16px !important;
+  }
+
+  .formDiv {
+    width: 100% !important;
+    margin: 0 16px !important;
+
+    .formH2 {
+      display: flex;
+      justify-content: center !important;
+      margin-top: 30px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .home {
+    width: 32px !important;
+  }
+
+  .arrow {
+    width: 10px !important;
+  }
+
+  .textHome {
+    font-size: 24px !important;
+  }
+
+  .h1Institucional {
+    font-size: 48px !important;
+  }
+
+  .buttonLayout {
+    font-size: 32px !important;
+    height: 58px !important;
+  }
+
+  .layoutPage {
+    margin-bottom: 84px !important;
+
+    .layoutText {
+      max-width: 67.2vw !important;
+
+      .layoutH2 {
+        font-size: 48px !important;
+      }
+
+      .layoutP {
+        font-size: 26px !important;
+      }
+    }
+
+    .formDiv {
+      width: 67.2vw !important;
+
+      .formH2 {
+        font-size: 48px !important;
+      }
+
+      .formLabel {
+        font-size: 28px !important;
+      }
+
+      .formLabelInstagram {
+        font-size: 28px !important;
+      }
+
+      .formSpan {
+        font-size: 24px !important;
+      }
+
+      .formField {
+        height: 63px !important;
+
+        &::placeholder {
+          font-size: 28px !important;
+        }
+      }
+
+      .formConfirm {
+        font-size: 28px !important;
+
+        .confirmField {
+          min-width: 1.44vw !important;
+        }
+      }
+
+      .buttonConfirm {
+        font-size: 32px !important;
+        height: 71px !important;
+      }
+
+      .spanConfirm {
+        font-size: 24px !important;
+      }
+    }
+  }
+}

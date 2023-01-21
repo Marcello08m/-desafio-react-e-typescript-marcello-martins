@@ -1,0 +1,180 @@
+.Header {
+  background: black;
+  padding: 22px 0;
+  color: white;
+
+  .firstDiv {
+    display: flex;
+    justify-content: space-between;
+
+    .searchDiv {
+      width: 20.63vw;
+      background: white;
+      border-radius: 5px;
+      border: 2px solid #f2f2f2;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.79%;
+
+      input {
+        display: flex;
+        font-size: 14px;
+        height: 32px;
+        border: 0;
+        width: 100%;
+        padding: 8px 44px 8px 16px;
+
+        &::placeholder {
+          color: #c6c6c6;
+        }
+      }
+
+      img {
+        cursor: pointer;
+        display: flex;
+        // width: 1.41vw;
+        position: absolute;
+        right: 20px;
+      }
+    }
+
+    .headerButton {
+      display: flex;
+      gap: 55px;
+      margin-right: 100px;
+      height: 28px;
+
+      .buttonEntrar {
+        cursor: pointer;
+        justify-content: center;
+        text-transform: uppercase;
+        align-items: center;
+        display: flex;
+        font-weight: 400;
+        font-size: 14px;
+        color: white;
+        background: black;
+        height: 28px;
+        border: 0;
+      }
+
+      .cartButton {
+        cursor: pointer;
+        background: black;
+        height: 28px;
+        border: 0;
+
+        img {
+          display: flex;
+          height: 28px;
+        }
+      }
+    }
+
+    .logo {
+      display: flex;
+      margin-left: 100px;
+      width: 10.63vw;
+    }
+
+    .menuHamburguer {
+      border: 0;
+      background: black;
+      padding-left: 16px;
+      display: none;
+    }
+  }
+}
+
+.secondDiv {
+  background: black;
+  margin-top: 1px;
+  display: flex;
+  flex-direction: row;
+  padding: 14px 0 14px 7.81vw;
+  gap: 55px;
+
+  .secondHeaderButton {
+    background: black;
+    color: white;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Header {
+    height: 139px;
+
+    .menuHamburguer {
+      display: flex !important;
+    }
+
+    .logo {
+      width: 13.28vw !important;
+      margin-left: 0 !important;
+    }
+
+    .buttonEntrar {
+      display: none !important;
+    }
+
+    .searchDiv {
+      width: 96.88% !important;
+      position: absolute !important;
+      top: 78px !important;
+      left: 16px !important;
+      right: 16px !important;
+    }
+
+    .headerButton {
+      margin-right: 16px !important;
+    }
+  }
+  .secondDiv {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .searchDiv {
+    height: 57px !important;
+
+    input {
+      font-size: 28px !important;
+      height: 57px !important;
+    }
+
+    img {
+      width: 1.41vw !important;
+    }
+  }
+
+  .headerButton {
+    height: 54px !important;
+
+    .buttonEntrar {
+      font-size: 28px !important;
+      height: 54px !important;
+    }
+
+    .cartButton {
+      img {
+        height: 54px !important;
+      }
+    }
+  }
+
+  .secondDiv {
+    padding-left: 100px !important;
+
+    .secondHeaderButton {
+      font-size: 28px !important;
+    }
+  }
+}

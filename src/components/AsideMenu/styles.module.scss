@@ -1,0 +1,70 @@
+.blackout {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(69, 69, 69, 0.7);
+
+  .container {
+    position: absolute;
+    transition: 0.2s;
+    left: 0%;
+    right: 3.52%;
+    top: 0%;
+    bottom: 57.02%;
+    background: white;
+
+    .buttonsTop {
+      display: flex;
+      background: black;
+      height: 78px;
+      align-items: center;
+      justify-content: space-between;
+
+      .buttonEntrar {
+        border: 0;
+        background: black;
+        color: white;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 14px;
+        margin-left: 16px;
+        text-transform: uppercase;
+      }
+
+      .buttonExit {
+        background: black;
+        border: 0;
+        width: 15px;
+        float: right;
+        margin-right: 16px;
+      }
+    }
+
+    .buttonsBottom {
+      display: flex;
+      flex-direction: column;
+      margin-top: 31px;
+      gap: 12px;
+
+      .secondButton {
+        border: 0;
+        background: white;
+        font-family: "Roboto";
+        font-weight: 500;
+        font-size: 14px;
+        color: #c4c4c4;
+        text-align: start;
+        padding-left: 16px;
+      }
+    }
+  }
+
+  .aside {
+    transform: translateX(-100%);
+  }
+}
+
+.invisible {
+  visibility: hidden;
+  pointer-events: none;
+}
