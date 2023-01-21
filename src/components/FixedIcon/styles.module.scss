@@ -1,0 +1,38 @@
+.fixedContainer {
+  position: fixed;
+  right: 16px;
+  bottom: 189px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 5px;
+
+  button {
+    border: 0;
+    width: 34px;
+    height: 34px;
+    background: none;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .fixedContainer {
+    bottom: 229px;
+
+    button {
+      width: 66px;
+      height: 66px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .fixedContainer {
+    bottom: 29px;
+  }
+}
