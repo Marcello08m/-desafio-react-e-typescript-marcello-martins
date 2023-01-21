@@ -3,9 +3,33 @@ import Home from "../../assets/svg/Home.svg";
 import Arrow from "../../assets/svg/Arrow.svg";
 import { useState } from "react";
 import { Formik, Form, Field } from "formik";
+import * as yup from "yup";
+import "yup-phone";
+import { cpf } from "cpf-cnpj-validator";
 
 export default function Institutional() {
   const [currTab, setCurrTab] = useState(0);
+  const [hasSubmited, setSubmited] = useState(false);
+  const validationSchema = yup.object().shape({
+    name: yup
+      .string()
+      .min(3, "*Nome muito curto")
+      .required("*Campo Obrigatório"),
+    email: yup.string().email("*Email inválido").required("*Campo Obrigatório"),
+    CPF: yup
+      .string()
+      .required("*Campo Obrigatório")
+      .test("Válida CPF", "*CPF inválido", (CPF = "") =>
+        cpf.isValid(CPF, true)
+      ),
+    birthDate: yup.string().required("*Campo Obrigatório"),
+    phone: yup
+      .string()
+      .required("*Campo Obrigatório")
+      .phone("BR", false, "*Telefone inválido"),
+    instagram: yup.string(),
+    check: yup.boolean().oneOf([true]).required(),
+  });
   return (
     <>
       <div className={styles.homeDiv}>
@@ -114,7 +138,10 @@ export default function Institutional() {
             <div className={styles.formDiv}>
               <h2 className={styles.formH2}>Preencha o formulário</h2>
               <Formik
-                onSubmit={() => {}}
+                validationSchema={validationSchema}
+                onSubmit={() => {
+                  setSubmited(true);
+                }}
                 initialValues={{
                   name: "",
                   email: "",
@@ -125,16 +152,16 @@ export default function Institutional() {
                   check: false,
                 }}
               >
-                {(props) => (
+                {({ errors, touched }) => (
                   <div className={styles.formContact}>
                     <Form>
-                      <div>
+                      <div className={styles.inputContainer}>
                         <label className={styles.formLabel} htmlFor="name">
                           Nome:
                         </label>
-                        <span className={styles.formSpan}>
-                          *Campo Obrigatório
-                        </span>
+                        {errors.name && touched.name && (
+                          <span className={styles.formSpan}>{errors.name}</span>
+                        )}
                         <Field
                           type="text"
                           name="name"
@@ -142,13 +169,15 @@ export default function Institutional() {
                           className={styles.formField}
                         />
                       </div>
-                      <div>
+                      <div className={styles.inputContainer}>
                         <label className={styles.formLabel} htmlFor="email">
                           E-mail:
                         </label>
-                        <span className={styles.formSpan}>
-                          *Campo Obrigatório
-                        </span>
+                        {errors.email && touched.email && (
+                          <span className={styles.formSpan}>
+                            {errors.email}
+                          </span>
+                        )}
                         <Field
                           type="email"
                           name="email"
@@ -156,13 +185,13 @@ export default function Institutional() {
                           className={styles.formField}
                         />
                       </div>
-                      <div>
+                      <div className={styles.inputContainer}>
                         <label className={styles.formLabel} htmlFor="CPF">
                           CPF:
                         </label>
-                        <span className={styles.formSpan}>
-                          *Campo Obrigatório
-                        </span>
+                        {errors.CPF && touched.CPF && (
+                          <span className={styles.formSpan}>{errors.CPF}</span>
+                        )}
                         <Field
                           type="text"
                           name="CPF"
@@ -170,13 +199,15 @@ export default function Institutional() {
                           className={styles.formField}
                         />
                       </div>
-                      <div>
-                        <label className={styles.formLabel} htmlFor="CPF">
+                      <div className={styles.inputContainer}>
+                        <label className={styles.formLabel} htmlFor="birthDate">
                           Data de Nascimento:
                         </label>
-                        <span className={styles.formSpan}>
-                          *Campo Obrigatório
-                        </span>
+                        {errors.birthDate && touched.birthDate && (
+                          <span className={styles.formSpan}>
+                            {errors.birthDate}
+                          </span>
+                        )}
                         <Field
                           type="text"
                           name="birthDate"
@@ -184,13 +215,15 @@ export default function Institutional() {
                           className={styles.formField}
                         />
                       </div>
-                      <div>
+                      <div className={styles.inputContainer}>
                         <label className={styles.formLabel} htmlFor="phone">
                           Telefone:
                         </label>
-                        <span className={styles.formSpan}>
-                          *Campo Obrigatório
-                        </span>
+                        {errors.phone && touched.phone && (
+                          <span className={styles.formSpan}>
+                            {errors.phone}
+                          </span>
+                        )}
                         <Field
                           type="tel"
                           name="phone"
@@ -198,7 +231,7 @@ export default function Institutional() {
                           className={styles.formField}
                         />
                       </div>
-                      <div>
+                      <div className={styles.inputContainer}>
                         <label
                           className={styles.formLabelInstagram}
                           htmlFor="instagram"
@@ -224,9 +257,11 @@ export default function Institutional() {
                       <button className={styles.buttonConfirm}>
                         CADASTRE-SE
                       </button>
-                      <span className={styles.spanConfirm}>
-                        *Formulário enviado com sucesso!
-                      </span>
+                      {hasSubmited && (
+                        <span className={styles.spanConfirm}>
+                          *Formulário enviado com sucesso!
+                        </span>
+                      )}
                     </Form>
                   </div>
                 )}

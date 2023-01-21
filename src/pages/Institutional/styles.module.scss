@@ -1,7 +1,7 @@
 .homeDiv {
   display: flex;
   margin-top: 29px;
-  margin-left: 7.81%;
+  margin-left: 100px;
   gap: 10px;
   align-items: center;
   margin-bottom: 81px;
@@ -33,7 +33,8 @@
 
 .layoutPage {
   display: flex;
-  margin-left: 7.81%;
+  margin-left: 100px;
+  margin-right: 100px;
   margin-top: 80px;
   margin-bottom: 70px;
 
@@ -96,9 +97,14 @@
     .formContact {
       width: 100%;
 
+      .inputContainer {
+        position: relative;
+      }
+
       .formLabel {
         display: flex;
         margin-top: 12px;
+        margin-bottom: 12px;
         font-family: "Roboto";
         font-weight: 400;
         font-size: 14px;
@@ -116,12 +122,13 @@
       }
 
       .formSpan {
-        float: right;
+        position: absolute;
+        right: 20px;
         font-family: "Roboto";
         font-weight: 400;
         font-size: 12px;
+        top: 17px;
         color: #ff0000;
-        padding-right: 20px;
       }
 
       .formField {
@@ -130,9 +137,12 @@
         border: 1px solid #100d0e;
         border-radius: 25px;
         height: 46px;
+        padding-left: 20px;
 
         &::placeholder {
-          padding: 15px 0 15px 20px;
+          display: flex;
+          align-items: center;
+          padding: 15px 0 15px;
           font-family: "Roboto";
           font-weight: 400;
           font-size: 14px;
@@ -165,6 +175,7 @@
 
       .buttonConfirm {
         background: black;
+        cursor: pointer;
         color: white;
         font-family: "Roboto";
         font-weight: 400;
@@ -182,6 +193,128 @@
         font-family: "Roboto";
         font-weight: 400;
         font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .layoutPage {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 0 !important;
+    margin-bottom: 82px !important;
+    width: 96.88%;
+
+    .layoutText {
+      max-width: 96.88% !important;
+      margin: 30px 16px !important;
+
+      .layoutH2 {
+        display: flex;
+        justify-content: center !important;
+        margin-top: 0px !important;
+      }
+    }
+  }
+
+  .buttonDiv {
+    width: 96.88% !important;
+    border-right: 0 !important;
+    margin: 0 16px !important;
+  }
+
+  .formDiv {
+    width: 100% !important;
+    margin: 0 16px !important;
+
+    .formH2 {
+      display: flex;
+      justify-content: center !important;
+      margin-top: 30px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .home {
+    width: 32px !important;
+  }
+
+  .arrow {
+    width: 10px !important;
+  }
+
+  .textHome {
+    font-size: 24px !important;
+  }
+
+  .h1Institucional {
+    font-size: 48px !important;
+  }
+
+  .buttonLayout {
+    font-size: 32px !important;
+    height: 58px !important;
+  }
+
+  .layoutPage {
+    margin-bottom: 84px !important;
+
+    .layoutText {
+      max-width: 67.2vw !important;
+
+      .layoutH2 {
+        font-size: 48px !important;
+      }
+
+      .layoutP {
+        font-size: 26px !important;
+      }
+    }
+
+    .formDiv {
+      width: 67.2vw !important;
+
+      .formH2 {
+        font-size: 48px !important;
+      }
+
+      .formLabel {
+        font-size: 28px !important;
+      }
+
+      .formLabelInstagram {
+        font-size: 28px !important;
+      }
+
+      .formSpan {
+        font-size: 24px !important;
+      }
+
+      .formField {
+        height: 63px !important;
+
+        &::placeholder {
+          font-size: 28px !important;
+        }
+      }
+
+      .formConfirm {
+        font-size: 28px !important;
+
+        .confirmField {
+          min-width: 1.44vw !important;
+        }
+      }
+
+      .buttonConfirm {
+        font-size: 32px !important;
+        height: 71px !important;
+      }
+
+      .spanConfirm {
+        font-size: 24px !important;
       }
     }
   }
