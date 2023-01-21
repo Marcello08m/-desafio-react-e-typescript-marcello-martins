@@ -14,36 +14,52 @@ import instagramSvg from "../../assets/svg/Instagramlogo.svg";
 import twitterSvg from "../../assets/svg/Twitterlogo.svg";
 import youtubeSvg from "../../assets/svg/Youtubelogo.svg";
 import linkedinSvg from "../../assets/svg/Linkedinlogo.svg";
+import mais from "../../assets/svg/mais.svg";
 
 export default function Footer() {
   return (
     <footer>
-      <div className={styles.footer_top}>
-        <div className={styles.menu_list}>
+      <div className={styles.footerTop}>
+        <div className={styles.menuList}>
           <div>
-            <h2>INSTITUCIONAL</h2>
+            <div className={styles.menuH2}>
+              <h2>INSTITUCIONAL</h2>
+              <button className={styles.buttonPlus}>
+                <img src={mais} alt="mais" />
+              </button>
+            </div>
             <a>Quem Somos</a>
             <a>Política de Privacidade</a>
             <a>Segurança</a>
             <a>Seja um Revendedor</a>
           </div>
           <div>
-            <h2>DÚVIDAS</h2>
+            <div className={styles.menuH2}>
+              <h2>DÚVIDAS</h2>
+              <button className={styles.buttonPlus}>
+                <img src={mais} alt="mais" />
+              </button>
+            </div>
             <a>Entrega</a>
             <a>Pagamento</a>
             <a>Troca e Devoluções</a>
             <a>Dúvidas Frequentes</a>
           </div>
           <div>
-            <h2>FALE CONOSCO</h2>
+            <div className={styles.menuH2}>
+              <h2>FALE CONOSCO</h2>
+              <button className={styles.buttonPlus}>
+                <img src={mais} alt="mais" />
+              </button>
+            </div>
             <a>Atendimento Ao Consumidor</a>
             <a>(11) 4159 9504</a>
             <a>Atendimento Online</a>
             <a>(11) 99433-8825</a>
           </div>
         </div>
-        <div className={styles.redes_sociais}>
-          <div className={styles.redes_sociais_svg}>
+        <div className={styles.redesSociais}>
+          <div className={styles.redesSociaisSvg}>
             <img src={facebookSvg} alt="logo do facebook" />
             <img src={instagramSvg} alt="logo do instagram" />
             <img src={twitterSvg} alt="logo do twitter" />
@@ -55,7 +71,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className={styles.footer_bottom}>
+      <div className={styles.footerBottom}>
         <p>
           Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing <br /> Elit, Sed Do
           Eiusmod Tempor
@@ -70,7 +86,7 @@ export default function Footer() {
             <img src={payPalImg} alt="Bandeira PayPal" />
             <img src={boletoImg} alt="Bandeira Boleto" />
           </div>
-          <span className={styles.traço}></span>
+          <span className={styles.linha}></span>
           <div className={styles.certificado}>
             <img src={vtexPCI} alt="Certificado Vtex" />
           </div>
